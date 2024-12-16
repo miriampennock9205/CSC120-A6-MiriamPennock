@@ -1,20 +1,30 @@
+
 /**
  * Represents a cafe with inventory for coffee, sugar, cream and cups.
  * Extends the Building class
  */
-public class Cafe extends Building{
-    /**The number of ounces of coffee in stock*/
+public class Cafe extends Building {
+
+    /**
+     * The number of ounces of coffee in stock
+     */
     private int nCoffeeOunces;
-    /** The number of sugar packets in stock */
+    /**
+     * The number of sugar packets in stock
+     */
     private int nSugarPackets;
-    /** The number of "splashes" of cream in stock */
+    /**
+     * The number of "splashes" of cream in stock
+     */
     private int nCreams;
-    /** The number of cups in stock */
-    private int nCups; 
+    /**
+     * The number of cups in stock
+     */
+    private int nCups;
 
     /**
      * Constructs a Cafe object with specified inventory levels.
-     * 
+     *
      * @param name The name of the cafe
      * @param address The address of the cafe
      * @param nFloors The number of floors in the cafe building
@@ -33,9 +43,9 @@ public class Cafe extends Building{
     }
 
     /**
-     * Sells a coffee with a specified size, sugar packets, and cream, updating inventory.
-     * If inventory is insufficient, prints an error message.
-     * 
+     * Sells a coffee with a specified size, sugar packets, and cream, updating
+     * inventory. If inventory is insufficient, prints an error message.
+     *
      * @param size The size of the coffee in ounces
      * @param nSugarPackets The number of sugar packets requested
      * @param nCreams The number of cream splashes requested
@@ -51,10 +61,11 @@ public class Cafe extends Building{
             System.out.println("Cannot complete sale: not enough stock.");
         }
     }
-    
+
     /**
-     * Restocks the cafe's inventory by adding specfied amounts of coffee, sugar, cream, and cups.
-     * 
+     * Restocks the cafe's inventory by adding specfied amounts of coffee,
+     * sugar, cream, and cups.
+     *
      * @param nCoffeeOunces The number of coffee ounces to add
      * @param nSugarPackets The number of sugar packets to add
      * @param nCreams The number of cream splashes to add
@@ -69,14 +80,14 @@ public class Cafe extends Building{
 
     /**
      * Tests the functionality of the Cafe class methods.
-     * 
+     *
      * @param args Command line arguments (not used)
      */
     public static void main(String[] args) {
-    
+
         //Create a new Cafe object with inital stock
         Cafe myCafe = new Cafe("Campus Cafe", "100 Green St, Northampton, MA", 1, 100, 50, 30, 20);
-       
+
         //Test toString method from Building class
         System.out.println(myCafe);
 
@@ -101,5 +112,5 @@ public class Cafe extends Building{
         System.out.println("Cups: " + myCafe.nCups);
 
     }
-    
+
 }
